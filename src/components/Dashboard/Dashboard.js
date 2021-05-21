@@ -18,9 +18,10 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Chart from './Chart';
-import Deposits from './Deposits';
+import AddParking from './AddParking';
 import Orders from './Orders';
 import Users from './Users';
+import Parking from './Parking'
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -162,15 +163,12 @@ export default function Dashboard() {
     setView(view)
   }
   const handleViews = () => {
-    // if(view === "home"){
-    //   return (
-    //     <Grid item xs={12} md={4} lg={3}>
-    //     <Paper className={fixedHeightPaper}>
-    //       <Deposits />
-    //     </Paper>
-    //   </Grid>
-    //   )
-    // }
+    if(view === "home"){
+      return (
+        // <AddParking/>
+        <Parking/>
+      )
+    }
     if(view === "client"){
       return (
         <Grid item xs={12}>
