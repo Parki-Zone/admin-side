@@ -196,6 +196,15 @@ export default function Dashboard() {
             </Grid>
       )
     }
+    if(view ==="addPark"){
+      return (
+        <Grid >
+              <Paper className={fixedHeightPaper}>
+                <AddParking />
+              </Paper>
+            </Grid>
+      )
+    }
   }
 
   return (
@@ -243,7 +252,13 @@ export default function Dashboard() {
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
-      <ListItemText primary="Dashboard" onClick={() => changeView("home")}/>
+      <ListItemText primary="Parkings List" onClick={() => changeView("home")}/>
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <LayersIcon />
+      </ListItemIcon>
+      <ListItemText primary="Add a Parking" onClick={() => changeView("addPark")}/>
     </ListItem>
     <ListItem button>
       <ListItemIcon>
@@ -262,12 +277,6 @@ export default function Dashboard() {
         <BarChartIcon />
       </ListItemIcon>
       <ListItemText primary="Reports" onClick={() => changeView("reports")}/>
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <LayersIcon />
-      </ListItemIcon>
-      <ListItemText primary="Integrations" />
     </ListItem>
     
   </div>
